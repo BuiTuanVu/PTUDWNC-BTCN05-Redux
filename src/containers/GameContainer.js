@@ -6,7 +6,10 @@ import Game from '../components/Game';
 class GameContainer extends Component {
     render() {
         return (
-            <Game history={this.props.history} xIsNext={this.props.xIsNext} stepNumber={this.props.stepNumber}
+            <Game history={this.props.history}
+                xIsNext={this.props.xIsNext}
+                stepNumber={this.props.stepNumber}
+                isReverse={this.props.isReverse}
                 clickSquare={this.props.clickSquare}
                 jumpTo={this.props.jumpTo}
                 sort={this.props.sort}
@@ -19,7 +22,8 @@ class GameContainer extends Component {
 const mapStateToProps = (state) => ({
     history: state.history,
     xIsNext: state.xIsNext,
-    stepNumber: state.stepNumber
+    stepNumber: state.stepNumber,
+    isReverse: state.isReverse,
 })
 
 const mapDispatchToProps = (dispatch) => ({
